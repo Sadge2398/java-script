@@ -1,0 +1,97 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(2,0,29,1) 10%, rgba(0,0,6,1) 67%, rgba(2,0,36,1) 90%, rgba(7,48,56,1) 100%);
+    overflow: hidden;
+}
+.wave1{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url(/assets/img/wave.png);
+    background-size: 1100px 100px;
+}
+.main .wave1{
+    animation: animate 13s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 1100px;
+    }
+}
+
+.card {
+  border-radius: 37px;
+  background: #25262c;
+  box-shadow:  -41px 41px 82px #000106, 41px -41px 82px #000318;
+    width: 400px;
+    height: 350px;
+    
+    
+  }
+  
+  .card:hover {
+    width: 400px;
+    height: 350px;
+    background: #226ce0;
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 20px;
+    
+    transition: all 1;
+  }
+  
+  .secondAnimation {
+    --hoverContorno: #226ce0;
+  }
+  
+  .secondAnimation:hover,
+  .secondAnimation:focus {
+    -webkit-animation: cardAnimacion 1.4s;
+    animation: cardAnimacion 1.4s;
+    box-shadow: 0 0 0 0.8em rgb(255, 255, 255);
+    border-radius: 20px;
+  }
+  
+  @-webkit-keyframes cardAnimacion {
+    0% {
+      box-shadow: 0 0 0 0 var(--hoverContorno);
+    }
+  }
+  
+  @keyframes cardAnimacion {
+    0% {
+      box-shadow: 0 0 0 0 var(--hoverContorno);
+    }
+  }
+  .cb1{
+    border-radius: 113px;
+    background: linear-gradient(225deg,#226ce0, #226ce0);
+    box-shadow:  -7px 7px 43px #010311,
+             7px -7px 43px #050d45;
+  }
+.mt-6{
+  margin-top: 19px;
+  margin-bottom: 37px;
+}
+.cb2{
+  font-size: 5rem;
+  color:white;
+}
+#eye {
+  float: right;
+  margin-top: -31px;
+  margin-right: 15px;
+}
