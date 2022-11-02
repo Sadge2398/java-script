@@ -10,3 +10,21 @@ function toggle() {
     state = true;
   }
 }
+
+
+let form = document.getElementById('login-form')
+form.addEventListener('submit', (event) => {
+  event.preventDefault()
+  let username = document.getElementById('name')
+  let password = document.getElementById('password')
+
+  // min 4, max 32
+  if(username.value == ''){
+    alert('username cannot be empty!')
+  }
+  // min 8, max 64
+  if (password.value == '') {
+    alert('password cannot be empty!')
+  }
+
+})
