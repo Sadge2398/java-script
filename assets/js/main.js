@@ -1,3 +1,5 @@
+
+
 var state = false;
 function toggle() {
   if (state) {
@@ -28,3 +30,25 @@ form.addEventListener('submit', (event) => {
   }
 
 })
+
+
+
+
+let input = document.getElementById("name" , "password")
+let error = document.getElementById("error-warrning")
+
+input.addEventListener("name", checkCodeLength)
+
+function checkCodeLength() {
+  let enteredCodeLength = input.value.length
+  let maxLength = 4
+
+  if (enteredCodeLength === maxLength) {
+    error.hidden = false
+    input.classList.add("error")
+  }
+  else {
+    error.hidden = true
+    input.classList.remove("error")
+  }
+}
